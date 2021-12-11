@@ -113,6 +113,12 @@
     <Compile Include="UIElements\SideButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UIElements\TournamentEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIElements\TournamentEditor.Designer.cs">
+      <DependentUpon>TournamentEditor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UIElements\HomePanels\ManageCoachesControlPanel.resx">
       <DependentUpon>ManageCoachesControlPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +146,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIElements\TournamentEditor.resx">
+      <DependentUpon>TournamentEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FinalAssignmentDatabaseDataSet.xsc">
       <DependentUpon>FinalAssignmentDatabaseDataSet.xsd</DependentUpon>
     </None>

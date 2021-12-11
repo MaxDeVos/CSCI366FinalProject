@@ -16,5 +16,16 @@ namespace CSCI366FinalProject.UIElements.HomePanels
         {
             InitializeComponent();
         }
+
+        private void tournamentViewButton_Click(object sender, EventArgs e)
+        {
+            tournamentNameLabel.Text = TournamentNameTextBox.Text;
+        }
+
+        private void tournamentEditButton_Click(object sender, EventArgs e)
+        {
+            TournamentEditor editor = new TournamentEditor();
+            editor.ShowDialog();
+        }
     }
 }

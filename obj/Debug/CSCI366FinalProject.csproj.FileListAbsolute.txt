@@ -10,7 +10,6 @@ M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Threading.Tasks.Extensions.
 M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Numerics.Vectors.dll
 M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Buffers.dll
 M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Text.Encodings.Web.dll
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.csprojAssemblyReference.cache
 M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.exe.config
 M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.Properties.Resources.resources
 M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.csproj.GenerateResource.cache
@@ -24,3 +23,5 @@ M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.Hom
 M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManagePlayersControlPanel.resources
 M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageTournamentsControlPanel.resources
 M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ViewAnalyticsControlPanel.resources
+M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Threading.Tasks.Extensions.xml

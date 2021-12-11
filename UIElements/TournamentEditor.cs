@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSCI366FinalProject
+namespace CSCI366FinalProject.UIElements
 {
-    public partial class Form1 : Form
+    public partial class TournamentEditor : Form
     {
-        public Form1()
+        public TournamentEditor()
         {
             InitializeComponent();
         }

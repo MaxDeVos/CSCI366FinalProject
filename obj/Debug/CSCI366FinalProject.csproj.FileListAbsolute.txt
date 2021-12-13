@@ -1,32 +1,14 @@
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\CSCI366FinalProject.exe.config
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\CSCI366FinalProject.exe
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\CSCI366FinalProject.pdb
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\Npgsql.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Memory.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Text.Json.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Threading.Tasks.Extensions.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Numerics.Vectors.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Buffers.dll
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Text.Encodings.Web.dll
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.exe.config
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.Properties.Resources.resources
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.csproj.GenerateResource.cache
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.csproj.CoreCompileInputs.cache
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.csproj.CopyComplete
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.exe
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.pdb
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.HomeWindow.resources
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageTeamsControlPanel.resources
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageCoachesControlPanel.resources
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManagePlayersControlPanel.resources
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageTournamentsControlPanel.resources
-M:\Workspace\C#\CSCI366FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ViewAnalyticsControlPanel.resources
-<<<<<<< HEAD
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-M:\Workspace\C#\CSCI366FinalProject\bin\Debug\System.Threading.Tasks.Extensions.xml
-=======
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.exe.config
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageCoachesControlPanel.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManagePlayersControlPanel.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageTeamsControlPanel.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageTournamentsControlPanel.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ViewAnalyticsControlPanel.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.HomeWindow.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.Properties.Resources.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.TournamentEditor.resources
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.csproj.GenerateResource.cache
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.csproj.CoreCompileInputs.cache
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\CSCI366FinalProject.exe.config
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\CSCI366FinalProject.exe
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\CSCI366FinalProject.pdb
@@ -38,19 +20,14 @@ C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bi
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\System.Buffers.dll
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.csprojAssemblyReference.cache
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.exe.config
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageCoachesControlPanel.resources
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManagePlayersControlPanel.resources
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageTeamsControlPanel.resources
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ManageTournamentsControlPanel.resources
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.HomePanels.ViewAnalyticsControlPanel.resources
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.HomeWindow.resources
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.Properties.Resources.resources
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.csproj.GenerateResource.cache
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.csproj.CoreCompileInputs.cache
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.csproj.CopyComplete
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.exe
 C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.pdb
-C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\obj\Debug\CSCI366FinalProject.UIElements.TournamentEditor.resources
->>>>>>> 49aacd8e7b2fd34cae6629fd789be71bd2553618
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\lyled\Documents\CSCI 366 Database\Final Project\CSCI366-FinalProject\bin\Debug\Microsoft.SqlServer.Types.dll

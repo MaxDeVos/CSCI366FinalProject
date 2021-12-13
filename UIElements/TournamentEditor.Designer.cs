@@ -29,21 +29,6 @@ namespace CSCI366FinalProject.UIElements
         /// </summary>
         private void InitializeComponent()
         {
-            this.teamNameTextBox1 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox9 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox2 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox13 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox3 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox10 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox4 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox15 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox5 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox11 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox6 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox14 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox7 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox12 = new System.Windows.Forms.TextBox();
-            this.teamNameTextBox8 = new System.Windows.Forms.TextBox();
             this.scoreTextBox1 = new System.Windows.Forms.TextBox();
             this.scoreTextBox2 = new System.Windows.Forms.TextBox();
             this.scoreTextBox3 = new System.Windows.Forms.TextBox();
@@ -63,127 +48,22 @@ namespace CSCI366FinalProject.UIElements
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.comboBox15 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // teamNameTextBox1
-            // 
-            this.teamNameTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox1.Location = new System.Drawing.Point(33, 148);
-            this.teamNameTextBox1.Name = "teamNameTextBox1";
-            this.teamNameTextBox1.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox1.TabIndex = 0;
-            // 
-            // teamNameTextBox9
-            // 
-            this.teamNameTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox9.Location = new System.Drawing.Point(250, 186);
-            this.teamNameTextBox9.Name = "teamNameTextBox9";
-            this.teamNameTextBox9.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox9.TabIndex = 1;
-            // 
-            // teamNameTextBox2
-            // 
-            this.teamNameTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox2.Location = new System.Drawing.Point(33, 224);
-            this.teamNameTextBox2.Name = "teamNameTextBox2";
-            this.teamNameTextBox2.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox2.TabIndex = 2;
-            // 
-            // teamNameTextBox13
-            // 
-            this.teamNameTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox13.Location = new System.Drawing.Point(467, 262);
-            this.teamNameTextBox13.Name = "teamNameTextBox13";
-            this.teamNameTextBox13.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox13.TabIndex = 3;
-            // 
-            // teamNameTextBox3
-            // 
-            this.teamNameTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox3.Location = new System.Drawing.Point(33, 300);
-            this.teamNameTextBox3.Name = "teamNameTextBox3";
-            this.teamNameTextBox3.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox3.TabIndex = 4;
-            // 
-            // teamNameTextBox10
-            // 
-            this.teamNameTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox10.Location = new System.Drawing.Point(250, 338);
-            this.teamNameTextBox10.Name = "teamNameTextBox10";
-            this.teamNameTextBox10.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox10.TabIndex = 5;
-            // 
-            // teamNameTextBox4
-            // 
-            this.teamNameTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox4.Location = new System.Drawing.Point(33, 376);
-            this.teamNameTextBox4.Name = "teamNameTextBox4";
-            this.teamNameTextBox4.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox4.TabIndex = 6;
-            // 
-            // teamNameTextBox15
-            // 
-            this.teamNameTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox15.Location = new System.Drawing.Point(684, 414);
-            this.teamNameTextBox15.Name = "teamNameTextBox15";
-            this.teamNameTextBox15.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox15.TabIndex = 7;
-            // 
-            // teamNameTextBox5
-            // 
-            this.teamNameTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox5.Location = new System.Drawing.Point(33, 452);
-            this.teamNameTextBox5.Name = "teamNameTextBox5";
-            this.teamNameTextBox5.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox5.TabIndex = 8;
-            // 
-            // teamNameTextBox11
-            // 
-            this.teamNameTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox11.Location = new System.Drawing.Point(250, 490);
-            this.teamNameTextBox11.Name = "teamNameTextBox11";
-            this.teamNameTextBox11.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox11.TabIndex = 9;
-            // 
-            // teamNameTextBox6
-            // 
-            this.teamNameTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox6.Location = new System.Drawing.Point(33, 528);
-            this.teamNameTextBox6.Name = "teamNameTextBox6";
-            this.teamNameTextBox6.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox6.TabIndex = 10;
-            // 
-            // teamNameTextBox14
-            // 
-            this.teamNameTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox14.Location = new System.Drawing.Point(467, 566);
-            this.teamNameTextBox14.Name = "teamNameTextBox14";
-            this.teamNameTextBox14.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox14.TabIndex = 11;
-            // 
-            // teamNameTextBox7
-            // 
-            this.teamNameTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox7.Location = new System.Drawing.Point(33, 604);
-            this.teamNameTextBox7.Name = "teamNameTextBox7";
-            this.teamNameTextBox7.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox7.TabIndex = 12;
-            // 
-            // teamNameTextBox12
-            // 
-            this.teamNameTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox12.Location = new System.Drawing.Point(250, 642);
-            this.teamNameTextBox12.Name = "teamNameTextBox12";
-            this.teamNameTextBox12.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox12.TabIndex = 13;
-            // 
-            // teamNameTextBox8
-            // 
-            this.teamNameTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox8.Location = new System.Drawing.Point(33, 680);
-            this.teamNameTextBox8.Name = "teamNameTextBox8";
-            this.teamNameTextBox8.Size = new System.Drawing.Size(164, 30);
-            this.teamNameTextBox8.TabIndex = 14;
             // 
             // scoreTextBox1
             // 
@@ -307,44 +187,198 @@ namespace CSCI366FinalProject.UIElements
             // 
             // tournamentNameTextBox
             // 
-            this.tournamentNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tournamentNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tournamentNameTextBox.Location = new System.Drawing.Point(33, 33);
             this.tournamentNameTextBox.Name = "tournamentNameTextBox";
-            this.tournamentNameTextBox.Size = new System.Drawing.Size(545, 53);
+            this.tournamentNameTextBox.Size = new System.Drawing.Size(545, 41);
             this.tournamentNameTextBox.TabIndex = 30;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 89);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.Size = new System.Drawing.Size(141, 17);
             this.label1.TabIndex = 31;
             this.label1.Text = "Tournament Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 128);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(30, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.Size = new System.Drawing.Size(94, 17);
             this.label2.TabIndex = 32;
             this.label2.Text = "Team Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(200, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 33;
             this.label3.Text = "Score";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(33, 147);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 33);
+            this.comboBox1.TabIndex = 34;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(33, 223);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(164, 33);
+            this.comboBox2.TabIndex = 35;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(33, 299);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(164, 33);
+            this.comboBox3.TabIndex = 36;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(33, 375);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(164, 33);
+            this.comboBox4.TabIndex = 37;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(33, 451);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(164, 33);
+            this.comboBox5.TabIndex = 38;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(33, 527);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(164, 33);
+            this.comboBox6.TabIndex = 39;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(33, 603);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(164, 33);
+            this.comboBox7.TabIndex = 40;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(33, 679);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(164, 33);
+            this.comboBox8.TabIndex = 41;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(250, 185);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(164, 33);
+            this.comboBox9.TabIndex = 42;
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(250, 337);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(164, 33);
+            this.comboBox10.TabIndex = 43;
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Location = new System.Drawing.Point(250, 489);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(164, 33);
+            this.comboBox11.TabIndex = 44;
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Location = new System.Drawing.Point(250, 641);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(164, 33);
+            this.comboBox12.TabIndex = 45;
+            // 
+            // comboBox13
+            // 
+            this.comboBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Location = new System.Drawing.Point(467, 261);
+            this.comboBox13.Name = "comboBox13";
+            this.comboBox13.Size = new System.Drawing.Size(164, 33);
+            this.comboBox13.TabIndex = 46;
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Location = new System.Drawing.Point(467, 565);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(164, 33);
+            this.comboBox14.TabIndex = 47;
+            // 
+            // comboBox15
+            // 
+            this.comboBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox15.FormattingEnabled = true;
+            this.comboBox15.Location = new System.Drawing.Point(684, 413);
+            this.comboBox15.Name = "comboBox15";
+            this.comboBox15.Size = new System.Drawing.Size(164, 33);
+            this.comboBox15.TabIndex = 48;
             // 
             // TournamentEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 741);
+            this.Controls.Add(this.comboBox15);
+            this.Controls.Add(this.comboBox14);
+            this.Controls.Add(this.comboBox13);
+            this.Controls.Add(this.comboBox12);
+            this.Controls.Add(this.comboBox11);
+            this.Controls.Add(this.comboBox10);
+            this.Controls.Add(this.comboBox9);
+            this.Controls.Add(this.comboBox8);
+            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -364,45 +398,15 @@ namespace CSCI366FinalProject.UIElements
             this.Controls.Add(this.scoreTextBox3);
             this.Controls.Add(this.scoreTextBox2);
             this.Controls.Add(this.scoreTextBox1);
-            this.Controls.Add(this.teamNameTextBox8);
-            this.Controls.Add(this.teamNameTextBox12);
-            this.Controls.Add(this.teamNameTextBox7);
-            this.Controls.Add(this.teamNameTextBox14);
-            this.Controls.Add(this.teamNameTextBox6);
-            this.Controls.Add(this.teamNameTextBox11);
-            this.Controls.Add(this.teamNameTextBox5);
-            this.Controls.Add(this.teamNameTextBox15);
-            this.Controls.Add(this.teamNameTextBox4);
-            this.Controls.Add(this.teamNameTextBox10);
-            this.Controls.Add(this.teamNameTextBox3);
-            this.Controls.Add(this.teamNameTextBox13);
-            this.Controls.Add(this.teamNameTextBox2);
-            this.Controls.Add(this.teamNameTextBox9);
-            this.Controls.Add(this.teamNameTextBox1);
             this.Name = "TournamentEditor";
             this.Text = "Tournament Editor";
+            this.Load += new System.EventHandler(this.TournamentEditor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox teamNameTextBox1;
-        private System.Windows.Forms.TextBox teamNameTextBox9;
-        private System.Windows.Forms.TextBox teamNameTextBox2;
-        private System.Windows.Forms.TextBox teamNameTextBox13;
-        private System.Windows.Forms.TextBox teamNameTextBox3;
-        private System.Windows.Forms.TextBox teamNameTextBox10;
-        private System.Windows.Forms.TextBox teamNameTextBox4;
-        private System.Windows.Forms.TextBox teamNameTextBox15;
-        private System.Windows.Forms.TextBox teamNameTextBox5;
-        private System.Windows.Forms.TextBox teamNameTextBox11;
-        private System.Windows.Forms.TextBox teamNameTextBox6;
-        private System.Windows.Forms.TextBox teamNameTextBox14;
-        private System.Windows.Forms.TextBox teamNameTextBox7;
-        private System.Windows.Forms.TextBox teamNameTextBox12;
-        private System.Windows.Forms.TextBox teamNameTextBox8;
         private System.Windows.Forms.TextBox scoreTextBox1;
         private System.Windows.Forms.TextBox scoreTextBox2;
         private System.Windows.Forms.TextBox scoreTextBox3;
@@ -422,5 +426,20 @@ namespace CSCI366FinalProject.UIElements
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.ComboBox comboBox15;
     }
 }

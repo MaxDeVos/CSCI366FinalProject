@@ -12,9 +12,26 @@ namespace CSCI366FinalProject.UIElements
 {
     public partial class TournamentEditor : Form
     {
+        private int tournament_id;
+        
         public TournamentEditor()
         {
             InitializeComponent();
+        }
+        public TournamentEditor(int tournament_id)
+        {
+            InitializeComponent();
+            tournamentNameTextBox.Text = tournament_id.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TournamentEditor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

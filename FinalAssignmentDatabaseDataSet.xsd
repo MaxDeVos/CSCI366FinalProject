@@ -324,7 +324,7 @@ FROM            player</CommandText>
               <Mapping SourceColumn="team_id" DataSetColumn="team_id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeletePlayer" Modifier="Public" Name="DeletePlayer" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeletePlayer">
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeletePlayer" Modifier="Public" Name="DeletePlayer" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeletePlayer">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM player
@@ -364,7 +364,7 @@ FROM            player LEFT OUTER JOIN
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertPlayer" Modifier="Public" Name="InsertPlayer" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertPlayer">
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertPlayer" Modifier="Public" Name="InsertPlayer" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertPlayer">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO player
@@ -382,7 +382,7 @@ VALUES        (@player_id, @first_name, @last_name, @phone, @jersey_num, @locati
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       player
@@ -535,7 +535,7 @@ WHERE        (player_id = @player_id)</CommandText>
               <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="FinalAssignmentDatabase.&quot;public&quot;.tournament" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM "FinalAssignmentDatabase"."public"."tournament" WHERE (("tournament_id" = @Original_tournament_id) AND ((@IsNull_start_date = 1 AND "start_date" IS NULL) OR ("start_date" = @Original_start_date)) AND ((@IsNull_end_date = 1 AND "end_date" IS NULL) OR ("end_date" = @Original_end_date)) AND ((@IsNull_prize = 1 AND "prize" IS NULL) OR ("prize" = @Original_prize)) AND ((@IsNull_host = 1 AND "host" IS NULL) OR ("host" = @Original_host)) AND ((@IsNull_tournament_name = 1 AND "tournament_name" IS NULL) OR ("tournament_name" = @Original_tournament_name)) AND ((@IsNull_location_id = 1 AND "location_id" IS NULL) OR ("location_id" = @Original_location_id)))</CommandText>
+                    <CommandText>DELETE FROM "FinalAssignmentDatabase"."public"."tournament" WHERE (("tournament_id" = @Original_tournament_id) AND ((@IsNull_start_date = 1 AND "start_date" IS NULL) OR ("start_date" = @Original_start_date)) AND ((@IsNull_end_date = 1 AND "end_date" IS NULL) OR ("end_date" = @Original_end_date)) AND ((@IsNull_prize = 1 AND "prize" IS NULL) OR ("prize" = @Original_prize)) AND ((@IsNull_host = 1 AND "host" IS NULL) OR ("host" = @Original_host)) AND ("tournament_name" = @Original_tournament_name) AND ((@IsNull_location_id = 1 AND "location_id" IS NULL) OR ("location_id" = @Original_location_id)) AND ("winner_id" = @Original_winner_id))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_tournament_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="tournament_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_start_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="start_date" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -546,42 +546,44 @@ WHERE        (player_id = @player_id)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_prize" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="prize" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_host" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="host" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_host" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="host" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tournament_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_location_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="location_id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_location_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="location_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_winner_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="winner_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO "FinalAssignmentDatabase"."public"."tournament" ("start_date", "end_date", "prize", "host", "tournament_name", "location_id") VALUES (@start_date, @end_date, @prize, @host, @tournament_name, @location_id)</CommandText>
+                    <CommandText>INSERT INTO "FinalAssignmentDatabase"."public"."tournament" ("start_date", "end_date", "prize", "host", "tournament_name", "location_id", "winner_id") VALUES (@start_date, @end_date, @prize, @host, @tournament_name, @location_id, @winner_id)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@start_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="start_date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@end_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="end_date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@prize" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="prize" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@host" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="host" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@location_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="location_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@winner_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="winner_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT "tournament_id", "start_date", "end_date", "prize", "host", "tournament_name", "location_id" FROM "public"."tournament"</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT "tournament_id", "start_date", "end_date", "prize", "host", "tournament_name", "location_id", "winner_id" FROM "public"."tournament"</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE "FinalAssignmentDatabase"."public"."tournament" SET "start_date" = @start_date, "end_date" = @end_date, "prize" = @prize, "host" = @host, "tournament_name" = @tournament_name, "location_id" = @location_id WHERE (("tournament_id" = @Original_tournament_id) AND ((@IsNull_start_date = 1 AND "start_date" IS NULL) OR ("start_date" = @Original_start_date)) AND ((@IsNull_end_date = 1 AND "end_date" IS NULL) OR ("end_date" = @Original_end_date)) AND ((@IsNull_prize = 1 AND "prize" IS NULL) OR ("prize" = @Original_prize)) AND ((@IsNull_host = 1 AND "host" IS NULL) OR ("host" = @Original_host)) AND ((@IsNull_tournament_name = 1 AND "tournament_name" IS NULL) OR ("tournament_name" = @Original_tournament_name)) AND ((@IsNull_location_id = 1 AND "location_id" IS NULL) OR ("location_id" = @Original_location_id)))</CommandText>
+                    <CommandText>UPDATE "FinalAssignmentDatabase"."public"."tournament" SET "start_date" = @start_date, "end_date" = @end_date, "prize" = @prize, "host" = @host, "tournament_name" = @tournament_name, "location_id" = @location_id, "winner_id" = @winner_id WHERE (("tournament_id" = @Original_tournament_id) AND ((@IsNull_start_date = 1 AND "start_date" IS NULL) OR ("start_date" = @Original_start_date)) AND ((@IsNull_end_date = 1 AND "end_date" IS NULL) OR ("end_date" = @Original_end_date)) AND ((@IsNull_prize = 1 AND "prize" IS NULL) OR ("prize" = @Original_prize)) AND ((@IsNull_host = 1 AND "host" IS NULL) OR ("host" = @Original_host)) AND ("tournament_name" = @Original_tournament_name) AND ((@IsNull_location_id = 1 AND "location_id" IS NULL) OR ("location_id" = @Original_location_id)) AND ("winner_id" = @Original_winner_id))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@start_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="start_date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@end_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="end_date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@prize" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="prize" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@host" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="host" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@location_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="location_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@winner_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="winner_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_tournament_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="tournament_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_start_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="start_date" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_start_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="start_date" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -591,10 +593,10 @@ WHERE        (player_id = @player_id)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_prize" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="prize" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_host" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="host" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_host" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="host" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tournament_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tournament_name" Precision="0" ProviderType="Varchar" Scale="0" Size="0" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_location_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="location_id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_location_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="location_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_winner_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="winner_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -608,8 +610,28 @@ WHERE        (player_id = @player_id)</CommandText>
               <Mapping SourceColumn="host" DataSetColumn="host" />
               <Mapping SourceColumn="tournament_name" DataSetColumn="tournament_name" />
               <Mapping SourceColumn="location_id" DataSetColumn="location_id" />
+              <Mapping SourceColumn="winner_id" DataSetColumn="winner_id" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="FinalAssignmentDatabase.&quot;public&quot;.tournament" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIDFromName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIDFromName" GeneratorSourceName="FillByIDFromName" GetMethodModifier="Public" GetMethodName="GetDataByIDFromName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIDFromName" UserSourceName="FillByIDFromName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT end_date, host, location_id, prize, start_date, tournament_id, tournament_name, winner_id FROM tournament WHERE (tournament_name = @value)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="value" ColumnName="tournament_name" DataSourceName="FinalAssignmentDatabase.&quot;public&quot;.tournament" DataTypeServer="varchar" DbType="Object" Direction="Input" ParameterName="value" Precision="0" Scale="0" Size="1024" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="FinalAssignmentDatabase.&quot;public&quot;.tournament" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByName" GeneratorSourceName="FillByName" GetMethodModifier="Public" GetMethodName="GetDataByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByName" UserSourceName="FillByName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT end_date, host, location_id, prize, start_date, tournament_id, tournament_name, winner_id FROM tournament</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="team_tournamentTableAdapter" GeneratorDataComponentClassName="team_tournamentTableAdapter" Name="team_tournament" UserDataComponentName="team_tournamentTableAdapter">
             <MainSource>
@@ -714,6 +736,75 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
               <Mapping SourceColumn="country" DataSetColumn="country" />
             </Mappings>
             <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="game_listTableAdapter" GeneratorDataComponentClassName="game_listTableAdapter" Name="game_list" UserDataComponentName="game_listTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="FinalAssignmentDatabase.&quot;public&quot;.game_list" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select * from game_list</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="tournament_id" DataSetColumn="tournament_id" />
+              <Mapping SourceColumn="tournament_name" DataSetColumn="tournament_name" />
+              <Mapping SourceColumn="game_num" DataSetColumn="game_num" />
+              <Mapping SourceColumn="team1_name" DataSetColumn="team1_name" />
+              <Mapping SourceColumn="team2_name" DataSetColumn="team2_name" />
+              <Mapping SourceColumn="team1_score" DataSetColumn="team1_score" />
+              <Mapping SourceColumn="team2_score" DataSetColumn="team2_score" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectName="FinalAssignmentDatabase.&quot;public&quot;.game_list" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByTournamentName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTournamentName" GeneratorSourceName="FillByTournamentName" GetMethodModifier="Public" GetMethodName="GetDataByTournamentName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTournamentName" UserSourceName="FillByTournamentName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tournament_id, tournament_name, game_num, team1_name, team2_name, team1_score, team2_score
+FROM     game_list
+WHERE  (tournament_name = @value)
+ORDER BY game_num ASC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="value" ColumnName="tournament_name" DataSourceName="FinalAssignmentDatabase.&quot;public&quot;.game_list" DataTypeServer="varchar" DbType="Object" Direction="Input" ParameterName="value" Precision="0" Scale="0" Size="1024" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tournament_winnerTableAdapter" GeneratorDataComponentClassName="tournament_winnerTableAdapter" Name="tournament_winner" UserDataComponentName="tournament_winnerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tournament.tournament_id, team.team_name
+FROM     team INNER JOIN
+                  tournament ON team.team_id = tournament.winner_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="team_name" DataSetColumn="team_name" />
+              <Mapping SourceColumn="tournament_id" DataSetColumn="tournament_id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FinalAssignmentDatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByName" GeneratorSourceName="FillByName" GetMethodModifier="Public" GetMethodName="GetDataByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByName" UserSourceName="FillByName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tournament.tournament_id, team.team_name
+FROM     team INNER JOIN
+                  tournament ON team.team_id = tournament.winner_id
+WHERE tournament.tournament_name = @value</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="value" ColumnName="tournament_name" DataSourceName="FinalAssignmentDatabase.&quot;public&quot;.tournament" DataTypeServer="varchar" DbType="Object" Direction="Input" ParameterName="value" Precision="0" Scale="0" Size="1024" SourceColumn="tournament_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources>
@@ -894,8 +985,9 @@ FROM            location</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="tournament_name" msprop:Generator_ColumnVarNameInTable="columntournament_name" msprop:Generator_ColumnPropNameInRow="tournament_name" msprop:Generator_ColumnPropNameInTable="tournament_nameColumn" msprop:Generator_UserColumnName="tournament_name" type="xs:string" minOccurs="0" />
+              <xs:element name="tournament_name" msprop:Generator_ColumnVarNameInTable="columntournament_name" msprop:Generator_ColumnPropNameInRow="tournament_name" msprop:Generator_ColumnPropNameInTable="tournament_nameColumn" msprop:Generator_UserColumnName="tournament_name" type="xs:string" />
               <xs:element name="location_id" msprop:Generator_ColumnVarNameInTable="columnlocation_id" msprop:Generator_ColumnPropNameInRow="location_id" msprop:Generator_ColumnPropNameInTable="location_idColumn" msprop:Generator_UserColumnName="location_id" type="xs:int" minOccurs="0" />
+              <xs:element name="winner_id" msprop:Generator_ColumnVarNameInTable="columnwinner_id" msprop:Generator_ColumnPropNameInRow="winner_id" msprop:Generator_ColumnPropNameInTable="winner_idColumn" msprop:Generator_UserColumnName="winner_id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -956,6 +1048,45 @@ FROM            location</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="game_list" msprop:Generator_TableClassName="game_listDataTable" msprop:Generator_TableVarName="tablegame_list" msprop:Generator_TablePropName="game_list" msprop:Generator_RowDeletingName="game_listRowDeleting" msprop:Generator_RowChangingName="game_listRowChanging" msprop:Generator_RowEvHandlerName="game_listRowChangeEventHandler" msprop:Generator_RowDeletedName="game_listRowDeleted" msprop:Generator_UserTableName="game_list" msprop:Generator_RowChangedName="game_listRowChanged" msprop:Generator_RowEvArgName="game_listRowChangeEvent" msprop:Generator_RowClassName="game_listRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tournament_id" msprop:Generator_ColumnVarNameInTable="columntournament_id" msprop:Generator_ColumnPropNameInRow="tournament_id" msprop:Generator_ColumnPropNameInTable="tournament_idColumn" msprop:Generator_UserColumnName="tournament_id" type="xs:int" minOccurs="0" />
+              <xs:element name="tournament_name" msprop:Generator_ColumnVarNameInTable="columntournament_name" msprop:Generator_ColumnPropNameInRow="tournament_name" msprop:Generator_ColumnPropNameInTable="tournament_nameColumn" msprop:Generator_UserColumnName="tournament_name" type="xs:string" minOccurs="0" />
+              <xs:element name="game_num" msprop:Generator_ColumnVarNameInTable="columngame_num" msprop:Generator_ColumnPropNameInRow="game_num" msprop:Generator_ColumnPropNameInTable="game_numColumn" msprop:Generator_UserColumnName="game_num" type="xs:int" minOccurs="0" />
+              <xs:element name="team1_name" msprop:Generator_ColumnVarNameInTable="columnteam1_name" msprop:Generator_ColumnPropNameInRow="team1_name" msprop:Generator_ColumnPropNameInTable="team1_nameColumn" msprop:Generator_UserColumnName="team1_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="team2_name" msprop:Generator_ColumnVarNameInTable="columnteam2_name" msprop:Generator_ColumnPropNameInRow="team2_name" msprop:Generator_ColumnPropNameInTable="team2_nameColumn" msprop:Generator_UserColumnName="team2_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="team1_score" msprop:Generator_ColumnVarNameInTable="columnteam1_score" msprop:Generator_ColumnPropNameInRow="team1_score" msprop:Generator_ColumnPropNameInTable="team1_scoreColumn" msprop:Generator_UserColumnName="team1_score" type="xs:int" minOccurs="0" />
+              <xs:element name="team2_score" msprop:Generator_ColumnVarNameInTable="columnteam2_score" msprop:Generator_ColumnPropNameInRow="team2_score" msprop:Generator_ColumnPropNameInTable="team2_scoreColumn" msprop:Generator_UserColumnName="team2_score" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tournament_winner" msprop:Generator_TableClassName="tournament_winnerDataTable" msprop:Generator_TableVarName="tabletournament_winner" msprop:Generator_TablePropName="tournament_winner" msprop:Generator_RowDeletingName="tournament_winnerRowDeleting" msprop:Generator_RowChangingName="tournament_winnerRowChanging" msprop:Generator_RowEvHandlerName="tournament_winnerRowChangeEventHandler" msprop:Generator_RowDeletedName="tournament_winnerRowDeleted" msprop:Generator_UserTableName="tournament_winner" msprop:Generator_RowChangedName="tournament_winnerRowChanged" msprop:Generator_RowEvArgName="tournament_winnerRowChangeEvent" msprop:Generator_RowClassName="tournament_winnerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="team_name" msprop:Generator_ColumnVarNameInTable="columnteam_name" msprop:Generator_ColumnPropNameInRow="team_name" msprop:Generator_ColumnPropNameInTable="team_nameColumn" msprop:Generator_UserColumnName="team_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tournament_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntournament_id" msprop:Generator_ColumnPropNameInRow="tournament_id" msprop:Generator_ColumnPropNameInTable="tournament_idColumn" msprop:Generator_UserColumnName="tournament_id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -994,6 +1125,14 @@ FROM            location</CommandText>
     <xs:unique name="playersUI_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:playersUI" />
       <xs:field xpath="mstns:player_id" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:tournament_winner" />
+      <xs:field xpath="mstns:team_name" />
+    </xs:unique>
+    <xs:unique name="tournament_winner_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tournament_winner" />
+      <xs:field xpath="mstns:tournament_id" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -48,14 +48,13 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             this.editTournamentButton = new System.Windows.Forms.Button();
             this.tournamentDropBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tournamentTableAdapter1 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.tournamentTableAdapter();
-            this.finalAssignmentDatabaseDataSet1 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSet();
             this.datasetBinder = new System.Windows.Forms.BindingSource(this.components);
-            this.game_listTableAdapter1 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.game_listTableAdapter();
-            this.teamTableAdapter1 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.teamTableAdapter();
-            this.tournament_winnerTableAdapter1 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.tournament_winnerTableAdapter();
             this.AddTournamentButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.finalAssignmentDatabaseDataSet1)).BeginInit();
+            this.tournamentTableAdapter2 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.tournamentTableAdapter();
+            this.game_listTableAdapter2 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.game_listTableAdapter();
+            this.tournament_winnerTableAdapter2 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.tournament_winnerTableAdapter();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.gameTableAdapter1 = new CSCI366FinalProject.FinalAssignmentDatabaseDataSetTableAdapters.gameTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.datasetBinder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,7 +210,7 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             // 
             // editTournamentButton
             // 
-            this.editTournamentButton.Location = new System.Drawing.Point(327, 50);
+            this.editTournamentButton.Location = new System.Drawing.Point(328, 50);
             this.editTournamentButton.Name = "editTournamentButton";
             this.editTournamentButton.Size = new System.Drawing.Size(75, 36);
             this.editTournamentButton.TabIndex = 19;
@@ -238,45 +237,47 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             this.label1.TabIndex = 21;
             this.label1.Text = "Select Tournament";
             // 
-            // tournamentTableAdapter1
-            // 
-            this.tournamentTableAdapter1.ClearBeforeFill = true;
-            // 
-            // finalAssignmentDatabaseDataSet1
-            // 
-            this.finalAssignmentDatabaseDataSet1.DataSetName = "FinalAssignmentDatabaseDataSet";
-            this.finalAssignmentDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // datasetBinder
-            // 
-            this.datasetBinder.DataSource = this.finalAssignmentDatabaseDataSet1;
-            this.datasetBinder.Position = 0;
-            // 
-            // game_listTableAdapter1
-            // 
-            this.game_listTableAdapter1.ClearBeforeFill = true;
-            // 
-            // teamTableAdapter1
-            // 
-            this.teamTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tournament_winnerTableAdapter1
-            // 
-            this.tournament_winnerTableAdapter1.ClearBeforeFill = true;
-            // 
             // AddTournamentButton
             // 
-            this.AddTournamentButton.Location = new System.Drawing.Point(472, 50);
+            this.AddTournamentButton.Location = new System.Drawing.Point(588, 50);
             this.AddTournamentButton.Name = "AddTournamentButton";
             this.AddTournamentButton.Size = new System.Drawing.Size(147, 36);
             this.AddTournamentButton.TabIndex = 22;
             this.AddTournamentButton.Text = "Add Tournament";
             this.AddTournamentButton.UseVisualStyleBackColor = true;
+            this.AddTournamentButton.Click += new System.EventHandler(this.AddTournamentButton_Click);
+            // 
+            // tournamentTableAdapter2
+            // 
+            this.tournamentTableAdapter2.ClearBeforeFill = true;
+            // 
+            // game_listTableAdapter2
+            // 
+            this.game_listTableAdapter2.ClearBeforeFill = true;
+            // 
+            // tournament_winnerTableAdapter2
+            // 
+            this.tournament_winnerTableAdapter2.ClearBeforeFill = true;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(409, 50);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(75, 36);
+            this.deleteButton.TabIndex = 23;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // gameTableAdapter1
+            // 
+            this.gameTableAdapter1.ClearBeforeFill = true;
             // 
             // ManageTournamentsControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.AddTournamentButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tournamentDropBox);
@@ -300,7 +301,6 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             this.Name = "ManageTournamentsControlPanel";
             this.Size = new System.Drawing.Size(1417, 743);
             this.Load += new System.EventHandler(this.ManageTournamentsControlPanel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.finalAssignmentDatabaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datasetBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -333,5 +333,10 @@ namespace CSCI366FinalProject.UIElements.HomePanels
         private FinalAssignmentDatabaseDataSetTableAdapters.teamTableAdapter teamTableAdapter1;
         private FinalAssignmentDatabaseDataSetTableAdapters.tournament_winnerTableAdapter tournament_winnerTableAdapter1;
         private System.Windows.Forms.Button AddTournamentButton;
+        private FinalAssignmentDatabaseDataSetTableAdapters.tournamentTableAdapter tournamentTableAdapter2;
+        private FinalAssignmentDatabaseDataSetTableAdapters.game_listTableAdapter game_listTableAdapter2;
+        private FinalAssignmentDatabaseDataSetTableAdapters.tournament_winnerTableAdapter tournament_winnerTableAdapter2;
+        private System.Windows.Forms.Button deleteButton;
+        private FinalAssignmentDatabaseDataSetTableAdapters.gameTableAdapter gameTableAdapter1;
     }
 }

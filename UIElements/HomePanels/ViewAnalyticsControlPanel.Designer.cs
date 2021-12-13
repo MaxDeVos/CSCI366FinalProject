@@ -35,19 +35,21 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(507, 296);
+            this.label1.Location = new System.Drawing.Point(506, 366);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(461, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Analytics";
+            this.label1.Text = "pretend there\'s some really cool analytics here that make you say \"wow\"";
             // 
             // ViewAnalyticsControlPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewAnalyticsControlPanel";
-            this.Size = new System.Drawing.Size(1063, 604);
+            this.Size = new System.Drawing.Size(1417, 743);
             this.ResumeLayout(false);
             this.PerformLayout();
 

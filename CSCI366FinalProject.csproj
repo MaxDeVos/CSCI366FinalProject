@@ -159,8 +159,8 @@
     </None>
     <None Include="FinalAssignmentDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FinalAssignmentDatabaseDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>FinalAssignmentDatabaseDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="FinalAssignmentDatabaseDataSet.xss">
       <DependentUpon>FinalAssignmentDatabaseDataSet.xsd</DependentUpon>

@@ -285,7 +285,7 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             this.deletePlayer.Name = "deletePlayer";
             this.deletePlayer.Size = new System.Drawing.Size(126, 49);
             this.deletePlayer.TabIndex = 9;
-            this.deletePlayer.Text = "Delete Selected Player";
+            this.deletePlayer.Text = "Delete Selected Coach";
             this.deletePlayer.UseVisualStyleBackColor = true;
             this.deletePlayer.Click += new System.EventHandler(this.deletePlayer_Click);
             // 
@@ -295,7 +295,7 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 49);
             this.button2.TabIndex = 10;
-            this.button2.Text = "Create New Player";
+            this.button2.Text = "Create New Coach";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

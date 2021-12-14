@@ -6202,15 +6202,15 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::Npgsql.NpgsqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "INSERT INTO coach\r\n                         (player_id, first_name, last_name, ph" +
-                "one, email, location_id, team_id)\r\nVALUES        (@coach_id, @first_name, @last_" +
-                "name, @phone, @email, @location_id, @team_id)";
+            this._commandCollection[5].CommandText = "INSERT INTO coach\r\n                         (coach_id, first_name, last_name, pho" +
+                "ne, email, location_id, team_id)\r\nVALUES        (@coach_id, @first_name, @last_n" +
+                "ame, @phone, @email, @location_id, @team_id)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "coach_id";
             param.Size = 1024;
             param.IsNullable = true;
-            param.SourceColumn = "player_id";
+            param.SourceColumn = "coach_id";
             this._commandCollection[5].Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "first_name";
@@ -9773,16 +9773,16 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
             this._commandCollection[8] = new global::Npgsql.NpgsqlCommand();
             this._commandCollection[8].Connection = this.Connection;
             this._commandCollection[8].CommandText = "INSERT INTO team\r\n                      (team_id, team_name, location_id)\r\nVALUES" +
-                "        (@player_id, @first_name, @location_id)";
+                "        (@team_id, @team_name, @location_id)";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             param = new global::Npgsql.NpgsqlParameter();
-            param.ParameterName = "player_id";
+            param.ParameterName = "team_id";
             param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "team_id";
             this._commandCollection[8].Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
-            param.ParameterName = "first_name";
+            param.ParameterName = "team_name";
             param.Size = 30;
             param.IsNullable = true;
             param.SourceColumn = "team_name";
@@ -10216,22 +10216,22 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int InsertTeam(object player_id, object first_name, object location_id) {
+        public virtual int InsertTeam(object team_id, object team_name, object location_id) {
             global::Npgsql.NpgsqlCommand command = this.CommandCollection[8];
-            if ((player_id == null)) {
-                throw new global::System.ArgumentNullException("player_id");
+            if ((team_id == null)) {
+                throw new global::System.ArgumentNullException("team_id");
             }
             else {
-                command.Parameters[0].Value = ((object)(player_id));
+                command.Parameters[0].Value = ((object)(team_id));
             }
-            if ((first_name == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
+            if ((team_name == null)) {
+                throw new global::System.ArgumentNullException("team_name");
             }
             else {
-                command.Parameters[1].Value = ((object)(first_name));
+                command.Parameters[1].Value = ((object)(team_name));
             }
             if ((location_id == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("location_id");
             }
             else {
                 command.Parameters[2].Value = ((object)(location_id));
@@ -12022,7 +12022,7 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[3];
+            this._commandCollection = new global::System.Data.IDbCommand[4];
             this._commandCollection[0] = new global::Npgsql.NpgsqlCommand();
             ((global::Npgsql.NpgsqlCommand)(this._commandCollection[0])).Connection = new global::Npgsql.NpgsqlConnection(global::CSCI366FinalProject.Properties.Settings.Default.FinalAssignmentDatabaseConnectionString);
             ((global::Npgsql.NpgsqlCommand)(this._commandCollection[0])).CommandText = "SELECT        MAX(location_id) AS Expr1\r\nFROM            location";
@@ -12035,6 +12035,10 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
             ((global::Npgsql.NpgsqlCommand)(this._commandCollection[2])).Connection = new global::Npgsql.NpgsqlConnection(global::CSCI366FinalProject.Properties.Settings.Default.FinalAssignmentDatabaseConnectionString);
             ((global::Npgsql.NpgsqlCommand)(this._commandCollection[2])).CommandText = "SELECT MAX(coach_id) FROM coach";
             ((global::Npgsql.NpgsqlCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::Npgsql.NpgsqlCommand();
+            ((global::Npgsql.NpgsqlCommand)(this._commandCollection[3])).Connection = new global::Npgsql.NpgsqlConnection(global::CSCI366FinalProject.Properties.Settings.Default.FinalAssignmentDatabaseConnectionString);
+            ((global::Npgsql.NpgsqlCommand)(this._commandCollection[3])).CommandText = "SELECT        MAX(team_id) AS Expr1\r\nFROM            team";
+            ((global::Npgsql.NpgsqlCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12098,6 +12102,34 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> GetLargestCoachID() {
             global::Npgsql.NpgsqlCommand command = ((global::Npgsql.NpgsqlCommand)(this.CommandCollection[2]));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> GetHighestTeamID() {
+            global::Npgsql.NpgsqlCommand command = ((global::Npgsql.NpgsqlCommand)(this.CommandCollection[3]));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

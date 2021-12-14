@@ -134,10 +134,10 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             if (creatingPlayer)
             {
                 int locationID = (int)queriesTableAdapter1.GetLargestLocationID() + 1;
-                int playerID = (int)queriesTableAdapter1.GetLargestPlayerID() + 1;
+                int teamID = (int)queriesTableAdapter1.GetHighestTeamID() + 1;
                 locationTableAdapter1.InsertQuery(locationID, TextBoxStreetAddress.Text, TextBoxCity.Text,
                     TextBoxState.Text, TextBoxPlayerCountry.Text);
-                teamTableAdapter1.InsertTeam(playerID, TextBoxFirstName.Text, locationID);
+                teamTableAdapter1.InsertTeam(teamID, TextBoxFirstName.Text, locationID);
                 EmptyModifyPlayerBox();
             }
             else

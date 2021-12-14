@@ -21,7 +21,6 @@ namespace CSCI366FinalProject
             side_buttons.Add(ButtonManagePlayers);
             side_buttons.Add(ButtonManageTeams);
             side_buttons.Add(ButtonManageTournaments);
-            side_buttons.Add(ButtonSeeAnalytics);
             MainPanel.Controls.Add(new ManageTeamsControlPanel());
         }
 
@@ -54,12 +53,6 @@ namespace CSCI366FinalProject
         {
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(new ManageTournamentsControlPanel());
-        }
-
-        private void ButtonSeeAnalytics_Click(object sender, EventArgs e)
-        {
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(new ViewAnalyticsControlPanel());
         }
     }
 }

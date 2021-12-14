@@ -101,12 +101,6 @@
     <Compile Include="UIElements\HomePanels\ManageTournamentsControlPanel.Designer.cs">
       <DependentUpon>ManageTournamentsControlPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIElements\HomePanels\ViewAnalyticsControlPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIElements\HomePanels\ViewAnalyticsControlPanel.Designer.cs">
-      <DependentUpon>ViewAnalyticsControlPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIElements\HomeWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,9 +129,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIElements\HomePanels\ManageTournamentsControlPanel.resx">
       <DependentUpon>ManageTournamentsControlPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIElements\HomePanels\ViewAnalyticsControlPanel.resx">
-      <DependentUpon>ViewAnalyticsControlPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIElements\HomeWindow.resx">
       <DependentUpon>HomeWindow.cs</DependentUpon>

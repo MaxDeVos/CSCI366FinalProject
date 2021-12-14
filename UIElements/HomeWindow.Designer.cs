@@ -35,12 +35,11 @@ namespace CSCI366FinalProject
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.finalAssignmentDatabaseDataSet = new CSCI366FinalProject.FinalAssignmentDatabaseDataSet();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.ButtonManageTeams = new CSCI366FinalProject.UIElements.SideButton();
-            this.ButtonSeeAnalytics = new CSCI366FinalProject.UIElements.SideButton();
             this.ButtonManagePlayers = new CSCI366FinalProject.UIElements.SideButton();
             this.ButtonManageTournaments = new CSCI366FinalProject.UIElements.SideButton();
             this.ButtonManageCoaches = new CSCI366FinalProject.UIElements.SideButton();
+            this.MainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalAssignmentDatabaseDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -60,17 +59,16 @@ namespace CSCI366FinalProject
             // 
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.ButtonManageTeams, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ButtonSeeAnalytics, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.ButtonManagePlayers, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ButtonManageTournaments, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.ButtonManageCoaches, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ButtonManageTournaments, 3, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -78,42 +76,23 @@ namespace CSCI366FinalProject
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1063, 36);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Location = new System.Drawing.Point(12, 54);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1063, 604);
-            this.MainPanel.TabIndex = 6;
-            // 
             // ButtonManageTeams
             // 
             this.ButtonManageTeams.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonManageTeams.Location = new System.Drawing.Point(3, 3);
             this.ButtonManageTeams.Name = "ButtonManageTeams";
-            this.ButtonManageTeams.Size = new System.Drawing.Size(200, 30);
+            this.ButtonManageTeams.Size = new System.Drawing.Size(259, 30);
             this.ButtonManageTeams.TabIndex = 0;
             this.ButtonManageTeams.Text = "Manage Teams";
             this.ButtonManageTeams.UseVisualStyleBackColor = true;
             this.ButtonManageTeams.Click += new System.EventHandler(this.ButtonManageTeams_Click);
             // 
-            // ButtonSeeAnalytics
-            // 
-            this.ButtonSeeAnalytics.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ButtonSeeAnalytics.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSeeAnalytics.Location = new System.Drawing.Point(851, 3);
-            this.ButtonSeeAnalytics.Name = "ButtonSeeAnalytics";
-            this.ButtonSeeAnalytics.Size = new System.Drawing.Size(199, 30);
-            this.ButtonSeeAnalytics.TabIndex = 4;
-            this.ButtonSeeAnalytics.Text = "See Analytics";
-            this.ButtonSeeAnalytics.UseVisualStyleBackColor = false;
-            this.ButtonSeeAnalytics.Click += new System.EventHandler(this.ButtonSeeAnalytics_Click);
-            // 
             // ButtonManagePlayers
             // 
             this.ButtonManagePlayers.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonManagePlayers.Location = new System.Drawing.Point(215, 3);
+            this.ButtonManagePlayers.Location = new System.Drawing.Point(268, 3);
             this.ButtonManagePlayers.Name = "ButtonManagePlayers";
-            this.ButtonManagePlayers.Size = new System.Drawing.Size(200, 30);
+            this.ButtonManagePlayers.Size = new System.Drawing.Size(259, 30);
             this.ButtonManagePlayers.TabIndex = 1;
             this.ButtonManagePlayers.Text = "Manage Players";
             this.ButtonManagePlayers.UseVisualStyleBackColor = true;
@@ -122,9 +101,9 @@ namespace CSCI366FinalProject
             // ButtonManageTournaments
             // 
             this.ButtonManageTournaments.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonManageTournaments.Location = new System.Drawing.Point(639, 3);
+            this.ButtonManageTournaments.Location = new System.Drawing.Point(798, 3);
             this.ButtonManageTournaments.Name = "ButtonManageTournaments";
-            this.ButtonManageTournaments.Size = new System.Drawing.Size(200, 30);
+            this.ButtonManageTournaments.Size = new System.Drawing.Size(257, 30);
             this.ButtonManageTournaments.TabIndex = 3;
             this.ButtonManageTournaments.Text = "Manage Tournaments";
             this.ButtonManageTournaments.UseVisualStyleBackColor = true;
@@ -133,13 +112,20 @@ namespace CSCI366FinalProject
             // ButtonManageCoaches
             // 
             this.ButtonManageCoaches.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonManageCoaches.Location = new System.Drawing.Point(427, 3);
+            this.ButtonManageCoaches.Location = new System.Drawing.Point(533, 3);
             this.ButtonManageCoaches.Name = "ButtonManageCoaches";
-            this.ButtonManageCoaches.Size = new System.Drawing.Size(200, 30);
+            this.ButtonManageCoaches.Size = new System.Drawing.Size(259, 30);
             this.ButtonManageCoaches.TabIndex = 2;
             this.ButtonManageCoaches.Text = "Manage Coaches";
             this.ButtonManageCoaches.UseVisualStyleBackColor = true;
             this.ButtonManageCoaches.Click += new System.EventHandler(this.ButtonManageCoaches_Click);
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Location = new System.Drawing.Point(12, 54);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1063, 604);
+            this.MainPanel.TabIndex = 6;
             // 
             // HomeWindow
             // 
@@ -169,7 +155,6 @@ namespace CSCI366FinalProject
         private SideButton ButtonManagePlayers;
         private SideButton ButtonManageCoaches;
         private SideButton ButtonManageTournaments;
-        private SideButton ButtonSeeAnalytics;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel MainPanel;
     }

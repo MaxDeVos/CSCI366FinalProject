@@ -156,27 +156,37 @@ namespace CSCI366FinalProject.UIElements.HomePanels
         private void ButtonSaveChanges_Click(object sender, EventArgs e)
         {
 
-            teamRow teamRow = (teamRow)teamTableAdapter1.GetDataByTeamName(DropDownPlayerTeam.Text).Rows[0];
+            try
+            {
 
-            if (creatingPlayer)
-            {
-                int locationID = (int) queriesTableAdapter1.GetLargestLocationID() + 1;
-                int playerID = (int)queriesTableAdapter1.GetLargestPlayerID() + 1;
-                locationTableAdapter.InsertQuery(locationID, TextBoxStreetAddress.Text, TextBoxCity.Text,
-                    TextBoxState.Text, TextBoxPlayerCountry.Text);
-                playerTableAdapter1.InsertPlayer(playerID, TextBoxFirstName.Text, TextBoxLastName.Text, TextBoxPhoneNum.Text,
-                    Int32.Parse(TextBoxJerseyNum.Text), locationID, teamRow.team_id);
-                EmptyModifyPlayerBox();
+                teamRow teamRow = (teamRow)teamTableAdapter1.GetDataByTeamName(DropDownPlayerTeam.Text).Rows[0];
+
+                if (creatingPlayer)
+                {
+                    int locationID = (int)queriesTableAdapter1.GetLargestLocationID() + 1;
+                    int playerID = (int)queriesTableAdapter1.GetLargestPlayerID() + 1;
+                    locationTableAdapter.InsertQuery(locationID, TextBoxStreetAddress.Text, TextBoxCity.Text,
+                        TextBoxState.Text, TextBoxPlayerCountry.Text);
+                    playerTableAdapter1.InsertPlayer(playerID, TextBoxFirstName.Text, TextBoxLastName.Text, TextBoxPhoneNum.Text,
+                        Int32.Parse(TextBoxJerseyNum.Text), locationID, teamRow.team_id);
+                    EmptyModifyPlayerBox();
+                }
+                else
+                {
+
+                    playerTableAdapter1.UpdateQuery(TextBoxFirstName.Text, TextBoxLastName.Text, TextBoxPhoneNum.Text,
+                        Int32.Parse(TextBoxJerseyNum.Text), teamRow.team_id, selectedPlayerID);
+                }
+                PlayerDataGridView.DataSource = GetFilledFilteredSearch();
+                PlayerDataGridView.Update();
+                PlayerDataGridView.Refresh();
+
             }
-            else
+            catch
             {
-                playerTableAdapter1.UpdateQuery(TextBoxFirstName.Text, TextBoxLastName.Text, TextBoxPhoneNum.Text,
-                    Int32.Parse(TextBoxJerseyNum.Text), teamRow.team_id, selectedPlayerID);
-                
+                MessageBox.Show("Invalid Entry");
             }
-            PlayerDataGridView.DataSource = GetFilledFilteredSearch();
-            PlayerDataGridView.Update();
-            PlayerDataGridView.Refresh();
+
         }
 
         private void EmptyModifyPlayerBox()

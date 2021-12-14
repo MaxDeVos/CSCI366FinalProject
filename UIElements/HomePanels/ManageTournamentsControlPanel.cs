@@ -20,7 +20,7 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             InitializeComponent();
             teamLabels = new List<Label> { teamLabel1, teamLabel2, teamLabel3, teamLabel4,
             teamLabel5, teamLabel6, teamLabel7, teamLabel8, teamLabel9, teamLabel10, teamLabel11,
-            teamLabel12, teamLabel13, teamLabel14};
+            teamLabel12, teamLabel13, teamLabel14, teamLabel15};
         }
 
         private void ManageTournamentsControlPanel_Load(object sender, EventArgs e)
@@ -89,8 +89,10 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             int id = tournamentTableAdapter2.GetDataByIDFromName(tournamentDropBox.SelectedItem).ToArray()[0].tournament_id;
             gameTableAdapter1.DeleteQuery(id);
             tournamentTableAdapter2.DeleteQuery(id);
-            RefreshTournamentList();
-            RefreshTournament();
+            for (int i = 0; i < 15; i++)
+            {
+                teamLabels[i].Text = "";
+            }
         }
     }
 }

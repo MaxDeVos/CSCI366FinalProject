@@ -47,8 +47,6 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             }
             return str.ToLower();
         }
-
-
         private void PopulateMenus()
         {
             location1DataTable tempTable = new location1DataTable();
@@ -119,6 +117,7 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             PlayerDataGridView.DataSource = GetFilledFilteredSearch();
             PlayerDataGridView.Update();
             PlayerDataGridView.Refresh();
+            EmptyModifyPlayerBox();
         }
 
         private void button2_Click_1(object sender, EventArgs e)

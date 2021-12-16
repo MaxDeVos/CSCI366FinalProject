@@ -7899,7 +7899,7 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Npgsql.NpgsqlCommand[4];
+            this._commandCollection = new global::Npgsql.NpgsqlCommand[5];
             this._commandCollection[0] = new global::Npgsql.NpgsqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        location_id, street_address, city, state_prov, country\r\nFROM       " +
@@ -7956,6 +7956,43 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
             param.IsNullable = true;
             param.SourceColumn = "country";
             this._commandCollection[3].Parameters.Add(param);
+            this._commandCollection[4] = new global::Npgsql.NpgsqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "UPDATE       location\r\nSET                street_address = @street_address, city " +
+                "= @city, state_prov = @state_prov, country = @country\r\nWHERE        (location_id" +
+                " = @location_id)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            param = new global::Npgsql.NpgsqlParameter();
+            param.ParameterName = "street_address";
+            param.Size = 100;
+            param.IsNullable = true;
+            param.SourceColumn = "street_address";
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::Npgsql.NpgsqlParameter();
+            param.ParameterName = "city";
+            param.Size = 100;
+            param.IsNullable = true;
+            param.SourceColumn = "city";
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::Npgsql.NpgsqlParameter();
+            param.ParameterName = "state_prov";
+            param.Size = 100;
+            param.IsNullable = true;
+            param.SourceColumn = "state_prov";
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::Npgsql.NpgsqlParameter();
+            param.ParameterName = "country";
+            param.Size = 100;
+            param.IsNullable = true;
+            param.SourceColumn = "country";
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::Npgsql.NpgsqlParameter();
+            param.ParameterName = "location_id";
+            param.Size = 1024;
+            param.IsNullable = true;
+            param.SourceColumn = "location_id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[4].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8293,6 +8330,59 @@ WHERE        (LOWER(team.team_name) LIKE CONCAT('%', @teamname, '%')) AND (LOWER
             }
             else {
                 command.Parameters[4].Value = ((object)(country));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateLocation(object street_address, object city, object state_prov, object country, object location_id) {
+            global::Npgsql.NpgsqlCommand command = this.CommandCollection[4];
+            if ((street_address == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((object)(street_address));
+            }
+            if ((city == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((object)(city));
+            }
+            if ((state_prov == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((object)(state_prov));
+            }
+            if ((country == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((object)(country));
+            }
+            if ((location_id == null)) {
+                throw new global::System.ArgumentNullException("location_id");
+            }
+            else {
+                command.Parameters[4].Value = ((object)(location_id));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

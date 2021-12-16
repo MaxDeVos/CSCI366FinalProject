@@ -154,6 +154,9 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             }
             else
             {
+                coachRow row = (coachRow)coachTableAdapter1.GetDataByCoachID(selectedPlayerID).Rows[0];
+                locationTableAdapter1.UpdateLocation(TextBoxStreetAddress.Text, TextBoxCity.Text,
+                    TextBoxState.Text, TextBoxPlayerCountry.Text, row.location_id);
                 coachTableAdapter1.UpdateQuery(TextBoxFirstName.Text, TextBoxLastName.Text, TextBoxPhoneNum.Text,
                     TextBoxEmail.Text, teamRow.team_id, selectedPlayerID);
 

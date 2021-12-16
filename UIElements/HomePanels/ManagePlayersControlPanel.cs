@@ -169,14 +169,16 @@ namespace CSCI366FinalProject.UIElements.HomePanels
                         TextBoxState.Text, TextBoxPlayerCountry.Text);
                     playerTableAdapter1.InsertPlayer(playerID, TextBoxFirstName.Text, TextBoxLastName.Text, TextBoxPhoneNum.Text,
                         Int32.Parse(TextBoxJerseyNum.Text), locationID, teamRow.team_id);
-                    EmptyModifyPlayerBox();
                 }
                 else
                 {
-
+                    playerRow playerRow = (playerRow)playerTableAdapter1.GetDataByPlayerID(selectedPlayerID).Rows[0];
+                    locationTableAdapter.UpdateLocation(TextBoxStreetAddress.Text, TextBoxCity.Text,
+                        TextBoxState.Text, TextBoxPlayerCountry.Text, playerRow.home_location_id);
                     playerTableAdapter1.UpdateQuery(TextBoxFirstName.Text, TextBoxLastName.Text, TextBoxPhoneNum.Text,
                         Int32.Parse(TextBoxJerseyNum.Text), teamRow.team_id, selectedPlayerID);
                 }
+                EmptyModifyPlayerBox();
                 PlayerDataGridView.DataSource = GetFilledFilteredSearch();
                 PlayerDataGridView.Update();
                 PlayerDataGridView.Refresh();
@@ -215,6 +217,7 @@ namespace CSCI366FinalProject.UIElements.HomePanels
             PlayerDataGridView.DataSource = GetFilledFilteredSearch();
             PlayerDataGridView.Update();
             PlayerDataGridView.Refresh();
+            EmptyModifyPlayerBox();
         }
     }
 }

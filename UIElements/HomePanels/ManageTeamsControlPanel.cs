@@ -137,13 +137,16 @@ namespace CSCI366FinalProject.UIElements.HomePanels
                 locationTableAdapter1.InsertQuery(locationID, TextBoxStreetAddress.Text, TextBoxCity.Text,
                     TextBoxState.Text, TextBoxPlayerCountry.Text);
                 teamTableAdapter1.InsertTeam(teamID, TextBoxFirstName.Text, locationID);
-                EmptyModifyPlayerBox();
             }
             else
             {
+                teamRow row = (teamRow)teamTableAdapter1.GetDataByTeamID(selectedPlayerID).Rows[0];
+                locationTableAdapter1.UpdateLocation(TextBoxStreetAddress.Text, TextBoxCity.Text,
+                    TextBoxState.Text, TextBoxPlayerCountry.Text, row.location_id);
                 teamTableAdapter1.UpdateQuery(TextBoxFirstName.Text, selectedPlayerID);
 
             }
+            EmptyModifyPlayerBox();
             PlayerDataGridView.DataSource = GetFilledFilteredSearch();
             PlayerDataGridView.Update();
             PlayerDataGridView.Refresh();
